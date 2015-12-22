@@ -10,17 +10,15 @@ When you implement the endpoint correctly, your application & team will show up 
 
 The marketplace is visible to all at https://conuhacks.appdirectondemand.com.
 
-## Implementation steps
-
-### Register your endpoint
+## Register your endpoint
 
 Visit https://conuhacks.appdirectondemand.com/register and follow the instructions on screen. You will be asked to enter a valid URI. Periodically during the day our server will make requests to all registered endpoints.
 
-> The server will make a GET request to your URI and expect a response with a status code of `200 OK`, and a content type of `application/json`.
+## Response
 
-### Response
+The server will make a `GET` request to your URI and expect a response with a status code of `200 OK`, and a content type of `application/json`.
 
-The response you return should conform to the following format:
+The response you return should be in the following format:
 
 ```javascript
 {

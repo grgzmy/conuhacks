@@ -1,4 +1,4 @@
-# ConUHack Marketplace
+# ConUHacks Marketplace
 
 AppDirect's API challenge may be a little different than what you are accustomed to. Rather than providing you with an API endpoint, we will ask your team for an endpoint for us to contact you!
 

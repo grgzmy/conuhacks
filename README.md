@@ -2,7 +2,7 @@
 
 AppDirect's API challenge may be a little different than what you are accustomed to. Rather than providing you with an API endpoint, we will ask your team for an endpoint for us to contact you!
 
-This type of API "hook" is a common pattern used in integration scenarios between systems. Much of AppDirect's billing integration and event functionality works that way. Rather than having an API client poll for changes or events happening in a third party system, you reverse the roles: don't call us, we'll call you.
+This pattern is sometimes called a [webhook](https://en.wikipedia.org/wiki/Webhook). It is particularly useful for real-time integration scenarios between systems. Much of AppDirect's billing and event functionality works that way. Rather than having a client poll for events happening in a third party system, you reverse the roles: don't call us, we'll call you.
 
 For ConUHacks, we have created a system that enables participants to register their team members & hackathon projects into a demonstration marketplace. It is in a sense a miniature version of how AppDirect works.
 
@@ -12,7 +12,7 @@ The marketplace is visible to everyone at https://conuhacks.appdirectondemand.co
 
 ## Register your endpoint
 
-Visit https://conuhacks.appdirectondemand.com/register and follow the instructions on screen. You will be asked to enter a valid URI. Periodically during the day our server will make requests to all registered endpoints.
+Visit https://conuhacks.appdirectondemand.com/register and follow the instructions. You will be asked to enter a valid URI. Our server will periodically make requests to all registered endpoints. You will receive a secret key. Keep it to yourself!
 
 ## Response
 
@@ -22,8 +22,11 @@ The response you return should be in the following format:
 
 ```javascript
 {
-	teamName: "Your team name",
-	projectName: "Your project name",
+	teamName: "Your team name",           // These two fields are mandatory. The rest is optional!
+	projectName: "Your project name",     // 
+	projectPicture: 'http://imgur.com/yourproject.jpg',   // Make it square ideally
+	teamPicture: 'http://imgur.com/yourteam.jpg`, 
+	
 	// We fully understand that this URL will be broken most of the time :)
 	projectUrl: "http://yourproject.com"
 	members: [{
@@ -34,3 +37,6 @@ The response you return should be in the following format:
 	}, { ... }]
 }
 ```
+
+- Images may be in any web compatible format. Animated .gif anyone? :)
+- Please, nothing offensive. Remember the Major League Hacking [code of conduct](http://static.mlh.io/docs/mlh-code-of-conduct.pdf).

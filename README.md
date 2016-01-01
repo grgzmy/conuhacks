@@ -24,8 +24,8 @@ The response you return should be in the following format:
 {
 	teamName: "Your team name",           // These two fields are mandatory. The rest is optional!
 	projectName: "Your project name",     // 
-	projectPicture: 'http://imgur.com/yourproject.jpg',   // Make it square ideally
-	teamPicture: 'http://imgur.com/yourteam.jpg`, 
+	projectPicture: "http://imgur.com/yourproject.jpg",   // Make it square ideally
+	teamPicture: "http://imgur.com/yourteam.jpg", 
 	
 	// We fully understand that this URL will be broken most of the time :)
 	projectUrl: "http://yourproject.com"

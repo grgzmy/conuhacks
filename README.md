@@ -22,17 +22,26 @@ The response you return should be in the following format:
 
 ```javascript
 {
-	teamName: "Your team name",           // These two fields are mandatory. The rest is optional!
+	// These two fields are mandatory. The rest is optional!	
+	teamName: "Your team name",           
 	projectName: "Your project name",     // 
-	projectPicture: "http://imgur.com/yourproject.jpg",   // Make it square ideally
+	
+	// Make it square ideally
+	projectPicture: "http://imgur.com/yourproject.jpg",
+	
+	// Cheese!
 	teamPicture: "http://imgur.com/yourteam.jpg", 
 	
 	// We fully understand that this URL will be broken most of the time :)
-	projectUrl: "http://yourproject.com"
+	projectUrl: "http://yourproject.com",
+	
+	// Fill this array up as needed
 	members: [{
 		name: "Team member #1",
-		// The email will be used to display a GRAVATAR
+		
+		// The email will be used to display a [GRAVATAR](https://en.gravatar.com/)
 		email: "member1@team.com",
+		
 		title: "Whatever title you want :)"
 	}, { ... }]
 }

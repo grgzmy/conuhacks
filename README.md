@@ -6,13 +6,15 @@ This pattern is sometimes called a [webhook](https://en.wikipedia.org/wiki/Webho
 
 For ConUHacks, we have created a system that enables participants to register their team members & hackathon projects into a demonstration marketplace. It is in a sense a miniature version of how AppDirect works.
 
-When you implement the endpoint correctly, your application & team will show up on the marketplace with the information you have provided to us. The more information you provide, the better your profile on the marketplclop;kmn ace will look.
+When you implement the endpoint correctly, your application & team will show up on the marketplace with the information you have provided to us. The more information you provide, the better your profile on the marketplace will look.
 
-The marketplace is visible to everyone at https://conuhacks.appdirectondemand.com.
+The marketplace is visible to everyone at https://conuhacks.appdirectondemand.com. Other teams and event attendees will be able to see your project and team profile and it will be displayed on a big screen tv.
 
 ## Register your endpoint
 
-Visit https://conuhacks.appdirectondemand.com/register and follow the instructions. You will be asked to enter a valid URI. Our server will periodically make requests to all registered endpoints. You will receive a secret key. Keep it to yourself!
+Visit https://conuhacks.appdirectondemand.com/register and follow the instructions. You will be asked to enter a valid URI. Our server will periodically make requests to all registered endpoints.
+
+You will receive a secret key. Keep it to yourself!
 
 ## Response
 
@@ -22,26 +24,28 @@ The response you return should be in the following format:
 
 ```javascript
 {
-	// These two fields are mandatory. The rest is optional!	
-	teamName: "Your team name",           
-	projectName: "Your project name",     // 
-	
+	key: 'your secret key',
+
+	// These two fields are mandatory. The rest is optional!
+	teamName: "Your team name",
+	projectName: "Your project name",     //
+
 	// Make it square ideally
 	projectPicture: "http://imgur.com/yourproject.jpg",
-	
+
 	// Cheese!
-	teamPicture: "http://imgur.com/yourteam.jpg", 
-	
+	teamPicture: "http://imgur.com/yourteam.jpg",
+
 	// We fully understand that this URL will be broken most of the time :)
 	projectUrl: "http://yourproject.com",
-	
+
 	// Fill this array up as needed
 	members: [{
 		name: "Team member #1",
-		
+
 		// The email will be used to display a [GRAVATAR](https://en.gravatar.com/)
 		email: "member1@team.com",
-		
+
 		title: "Whatever title you want :)"
 	}, { ... }]
 }

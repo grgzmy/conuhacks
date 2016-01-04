@@ -20,12 +20,12 @@ Visit https://conuhacks.appdirectondemand.com/register and follow the instructio
 
 The server will make a `GET` request to your URI and expect a response with a status code of `200 OK`, and a content type of `application/json`.
 
+Additionally, the response you return should have a header called `X-AppDirect-Key` with a value set to your secret key.
+
 The response you return should be in the following format:
 
 ```javascript
 {
-	key: 'your secret key',
-
 	// These two fields are mandatory. The rest is optional!
 	teamName: "Your team name",
 	projectName: "Your project name",     //

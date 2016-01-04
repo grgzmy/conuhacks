@@ -14,7 +14,7 @@ The marketplace is visible to everyone at https://conuhacks.appdirectondemand.co
 
 Visit https://conuhacks.appdirectondemand.com/register and follow the instructions. You will be asked to enter a valid URI. Our server will periodically make requests to all registered endpoints.
 
-You will receive a secret key. Keep it to yourself!
+**You will receive a secret key. Don't lose it and keep it to yourself!**
 
 ## Response
 
